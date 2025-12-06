@@ -1,4 +1,4 @@
-// data_mem.v  (NO dmem.hex, clean initialization)
+// data_mem.v  
 module data_mem #(
     parameter DEPTH_WORDS = 4096
 ) (
