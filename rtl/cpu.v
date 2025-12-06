@@ -1,4 +1,4 @@
-// cpu.v  (top-level CPU, visible debug outputs added)
+// cpu.v  (top-level CPU)
 `timescale 1ns/1ps
 module cpu_top (
     input  wire        clk,
@@ -48,8 +48,7 @@ module cpu_top (
 
     // -----------------------------------------------------------------
     // Register file: final instantiation (write data = wb_data)
-    // -----------------------------------------------------------------
-    // NOTE: regfile updates on the rising edge of clk; we keep it clocked.
+    // ----------------------------------------------------------------
     regfile u_rf (
         .clk(clk),
         .we(reg_write),
@@ -60,10 +59,6 @@ module cpu_top (
         .rd1(rd1),
         .rd2(rd2)
     );
-    // We'll replace the above placeholder by a real instance below to ensure single instance.
-    // (To avoid Verilog duplicate instantiation when copying into your editor,
-    //  simply remove these placeholder lines and use the final instance provided further down.)
-    // -----------------------------------------------------------------
 
     // imm gen
     imm_gen u_imm(
