@@ -110,7 +110,7 @@ module control (
                 jalr      = 1'b1;
                 reg_write = 1'b1; // write PC+4
                 imm_sel   = 2'b00;
-                alu_src   = 1'b1; // base + imm (we'll compute target separately)
+                alu_src   = 1'b1; // base + imm (to compute target separately)
             end
 
             OP_LUI: begin
