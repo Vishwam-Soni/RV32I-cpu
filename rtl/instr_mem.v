@@ -1,4 +1,4 @@
-// instr_mem.v with hardcoded program (NO hex file)
+// instr_mem.v 
 module instr_mem #(
     parameter DEPTH_WORDS = 4096
 )(
